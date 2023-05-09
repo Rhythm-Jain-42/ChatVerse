@@ -6,7 +6,7 @@ import { ChannelSearch, TeamChannelList, TeamChannelPreview } from './'
 import HospitalIcon from '../assets/hospital.png'
 import LogoutIcon from '../assets/logout.png'
 
-const SideBar = () => {
+const SideBar = () => (
     <div className="channel-list__sidebar">
         <div className='channel-list__sidebar__icon1'>
             <div className='icon1__inner'>
@@ -19,12 +19,23 @@ const SideBar = () => {
             </div>
         </div>
     </div>
-}
+);
+
+const CompanyHeader =() => (
+    <div className='channel-list__header'>
+        <p className='channel-list__header__text'>Medical Pager</p>
+    </div>
+)
 
 const ChannelListContainer = () => {
   return (
-    <div>ChannelListContainer</div>
-  )
+    <>
+        <SideBar />
+        <div className='channel-list__list__wrapper'>
+            <CompanyHeader />
+        </div>
+    </>
+  );
 }
 
-export default ChannelListContainer
+export default ChannelListContainer;
